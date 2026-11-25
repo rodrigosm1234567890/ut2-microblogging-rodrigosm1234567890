@@ -1,0 +1,250 @@
+/* ==========================================================================
+   ESTILOS DE LA BITÁCORA — Plantilla de la UT2 (Microblogging)
+
+   Solo usa propiedades que ya conoces de la UT1. Para personalizar tu
+   bitácora, empieza por los colores. Estos son los de la plantilla:
+
+     #1e293b  azul muy oscuro  → fondo de la cabecera y del pie
+     #478ac9  azul             → enlaces y etiquetas (#)
+     #db545a  coral            → tipo de post (Texto, Foto, Cita...)
+     #f2f5f8  gris muy claro   → fondo de la página
+     #6b7280  gris             → textos secundarios (fecha, alias, pie de foto)
+
+   Busca cada código con Ctrl+F y cámbialo por el color que quieras.
+   ========================================================================== */
+
+
+/* ==========================================================================
+   1. BASE
+   ========================================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Verdana, Arial, sans-serif;
+  font-size: 16px;
+  color: #111827;
+  background-color: #f2f5f8;
+}
+
+a:link,
+a:visited {
+  color: #478ac9;
+  text-decoration: none;
+}
+
+a:hover,
+a:active {
+  text-decoration: underline;
+}
+
+
+/* ==========================================================================
+   2. CABECERA DE LA BITÁCORA
+   ========================================================================== */
+
+.cabecera {
+  background-color: #1e293b;
+  color: #ffffff;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.cabecera .lema {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 4px 14px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.cabecera h1 {
+  font-size: 2.6rem;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.cabecera p {
+  color: #cbd5e1;
+  font-size: 1.1rem;
+}
+
+
+/* ==========================================================================
+   3. TIMELINE (columna central con los posts)
+   ========================================================================== */
+
+.timeline {
+  width: 90%;
+  margin: 40px auto;
+  /* En pantallas grandes, la columna queda muy ancha. Si quieres limitarla,
+     quita el comentario de la línea siguiente (max-width es una propiedad nueva):
+  max-width: 680px; */
+}
+
+
+/* ==========================================================================
+   4. POST
+   ========================================================================== */
+
+.post {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-bottom: 4px solid #e5e7eb;
+  padding: 24px;
+  margin-bottom: 30px;
+}
+
+/* Al pasar el ratón, la línea inferior se pinta del color de los enlaces */
+.post:hover {
+  border-bottom-color: #478ac9;
+}
+
+/* Autor del post */
+.post-cabecera h2 {
+  font-size: 1.1rem;
+}
+
+/* Alias, fecha y tipo de post */
+.meta {
+  color: #6b7280;
+  font-size: 0.85rem;
+  margin-bottom: 16px;
+}
+
+/* Tipo de post: Texto, Foto, Cita, Enlace, Diálogo, Vídeo, Música */
+.tipo {
+  background-color: #db545a;
+  color: #ffffff;
+  font-size: 0.7rem;
+  font-weight: bold;
+  padding: 3px 10px;
+  margin-left: 6px;
+}
+
+/* Texto del post */
+.post p {
+  margin-bottom: 12px;
+}
+
+/* Etiquetas (#) */
+.etiqueta {
+  font-weight: bold;
+}
+
+
+/* ==========================================================================
+   5. MULTIMEDIA
+   ========================================================================== */
+
+/* Foto con su pie (autor y licencia) */
+.post-imagen {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.post-imagen img {
+  width: 100%;
+}
+
+/* Tipo de post flotando sobre la foto */
+.post-imagen .tipo {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  margin-left: 0;
+}
+
+.post-imagen figcaption {
+  color: #6b7280;
+  font-size: 0.8rem;
+  font-style: italic;
+  margin-top: 6px;
+}
+
+/* Vídeo y música insertados */
+.post iframe,
+.post video,
+.post audio {
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.post iframe {
+  height: 320px;
+  border: 0;
+}
+
+
+/* ==========================================================================
+   6. CITA Y DIÁLOGO
+   ========================================================================== */
+
+.post blockquote {
+  border-left: 4px solid #db545a;
+  padding: 10px 20px;
+  margin-bottom: 12px;
+  font-size: 1.15rem;
+  font-style: italic;
+  background-color: #f9fafb;
+}
+
+.post blockquote p {
+  margin-bottom: 6px;
+}
+
+/* Autor de la cita */
+.post blockquote footer {
+  color: #6b7280;
+  font-size: 0.9rem;
+  font-style: normal;
+}
+
+/* Diálogo: cada intervención en un párrafo; el nombre, en <strong> */
+.dialogo p {
+  padding-left: 12px;
+  border-left: 2px solid #e5e7eb;
+  margin-bottom: 8px;
+}
+
+.dialogo strong {
+  color: #478ac9;
+}
+
+
+/* ==========================================================================
+   7. PIE DEL POST (interacciones)
+   ========================================================================== */
+
+.post-pie {
+  border-top: 1px solid #e5e7eb;
+  padding-top: 12px;
+  margin-top: 4px;
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.post .post-pie p {
+  margin-bottom: 0;
+}
+
+
+/* ==========================================================================
+   8. PIE DE LA PÁGINA
+   ========================================================================== */
+
+.pie {
+  background-color: #1e293b;
+  color: #cbd5e1;
+  text-align: center;
+  font-size: 0.85rem;
+  padding: 30px 20px;
+}
+
+.pie a:link,
+.pie a:visited {
+  color: #ffffff;
+}

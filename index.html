@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi bitácora</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <!-- CABECERA: cambia el lema, el título y la descripción -->
+  <header class="cabecera">
+    <span class="lema">Bitácora de TIC II</span>
+    <h1>Nombre de tu bitácora</h1>
+    <p>Una frase que explique de qué va tu bitácora.</p>
+  </header>
+
+  <!-- TIMELINE: cada post es un <article class="post">. El más reciente, arriba -->
+  <main class="timeline">
+
+    <!-- POST DE FOTO -->
+    <article class="post">
+      <header class="post-cabecera">
+        <h2>Nombre visible</h2>
+        <p class="meta">
+          @tu_alias · <time datetime="2026-11-26">26 nov.</time>
+        </p>
+      </header>
+      <figure class="post-imagen">
+        <img src="img/ejemplo.svg" alt="Dibujo de unas montañas con el sol detrás">
+        <span class="tipo">Foto</span>
+        <figcaption>Imagen: «Ejemplo», de la plantilla de TIC II (sustitúyela por la tuya, con su autor y su licencia).</figcaption>
+      </figure>
+      <p>Aquí va el texto del post. Una idea por post y lo importante al principio. <a class="etiqueta" href="#">#MiEtiqueta</a></p>
+      <footer class="post-pie">
+        <p>💬 0 · 🔁 0 · ❤️ 0</p>
+      </footer>
+    </article>
+
+    <!-- POST DE CITA -->
+    <article class="post">
+      <header class="post-cabecera">
+        <h2>Nombre visible</h2>
+        <p class="meta">
+          @tu_alias · <time datetime="2026-11-26">26 nov.</time>
+          <span class="tipo">Cita</span>
+        </p>
+      </header>
+      <blockquote>
+        <p>«Escribe aquí la frase que quieras citar».</p>
+        <footer>— Autor de la cita, <cite>obra de la que procede</cite></footer>
+      </blockquote>
+      <p>Por qué te gusta esta frase. <a class="etiqueta" href="#">#MiEtiqueta</a></p>
+      <footer class="post-pie">
+        <p>💬 0 · 🔁 0 · ❤️ 0</p>
+      </footer>
+    </article>
+
+    <!-- POST DE TEXTO -->
+    <article class="post">
+      <header class="post-cabecera">
+        <h2>Nombre visible</h2>
+        <p class="meta">
+          @tu_alias · <time datetime="2026-11-26">26 nov.</time>
+          <span class="tipo">Texto</span>
+        </p>
+      </header>
+      <p>¡Bienvenidos a mi bitácora! Aquí iré publicando cosas sobre… <a class="etiqueta" href="#">#Presentación</a></p>
+      <footer class="post-pie">
+        <p>💬 0 · 🔁 0 · ❤️ 0</p>
+      </footer>
+    </article>
+
+  </main>
+
+  <footer class="pie">
+    <p>Bitácora creada por @tu_alias para TIC II · IES Vía de la Plata · Curso 2026-27</p>
+  </footer>
+
+</body>
+</html>
